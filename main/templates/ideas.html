@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+  <title> About </title>
+{% endblock %}
+
+{%block body%}
+<br>
+<div class="row">
+<div class="card" style="width:30rem;">
+  <img class="card-img-top" src="{% static 'Shell/First idea/First_idea.jpg'%}" alt="Card image cap">
+  <div class="card-body">
+    <h3>First Idea</h3>
+    <p class="card-text">The first idea was to create an artistic recreation centre-theatre, dance studios, galleries, exhibitions. It is an autumn from the activities that breathe life into the building. The inspiration to choose the shape of the building was a shell. The entertainment centre is located on a water reservoir, which, although it is a lake, can collide with the shells. The shells can be used in several ways:
+ *as something ancient, they often appear reflected or sunk in fossils that we can see at exhibitions,
+ *water, vacation-miles, warm memories, wanting to return,
+ *a shelter, a home for the organisms living in them-a feeling of comfort, safety.</p>
+  </div>
+</div>
+<div class="card" style="width:30rem;">
+  <img class="card-img-top" src="{% static 'Shell/Second Idea/Shell.png'%}" alt="Card image cap">
+  <div class="card-body">
+    <h3>Second Idea</h3>
+    <p class="card-text">Over time, the mass of the building changed a lot, but it was still in shell-context. The type of centre has also slightly changed. It has evolved from a typically artistic to a mixed one, by adding a swimming pool as an addition for sports fans.</p>
+    <a href="{% url 'second_idea'%}" class="btn btn-primary">See more pictures</a>
+  </div>
+</div>
+<div class="card" style="width:30rem;">
+  <img class="card-img-top" src="{% static 'Shell/Third Idea/Building1.png'%}" alt="Card image cap">
+  <div class="card-body">
+    <h3>Third Idea</h3>
+    <p class="card-text">The third evolution of the building has not changed much in terms of building mass. A big change has taken place on the inside. Another mezzanine floor was added, which was supposed to be a restaurant floor. The other two floors have undergone a complete change and some of the solutions have become final.</p>
+    <a href="{% url 'third_idea'%}" class="btn btn-primary">See more pictures</a>
+    
+  </div>
+</div>
+
+</div>
+{%endblock%}

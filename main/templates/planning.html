@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{% block head %}
+  <title> About </title>
+{% endblock %}
+
+{%block body%}
+<br>
+<div class="row">
+  <div class="card" style="width:50rem;">
+    <img class="card-img-top" src="{% static 'Shell/First idea/First_idea.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h3>Planning</h3>
+      <p class="card-text">The first contact with the project is to receive a brief. After a thorough analysis of the client's requirements and an initial consideration of the possibilities, an important step is to analyse in detail the area where it will be located: stories, needs, site context, climate, sun path, wind rose and transport.
+  The next point was to adapt the design concept to the requirements of the surrounding residents and the area.</p>
+    </div>
+  </div>
+  <div class="card" style="width:auto"> 
+    <img style="width:auto; height:200px;" src="{% static 'images/IMG_1.jpg' %}">
+    <img style="width:auto; height:200px;" src="{% static 'images/IMG_2.jpg' %}">
+    <img style="width:auto; height:300px;" src="{% static 'images/IMG_3.jpg' %}">
+  </div>
+</div>
+{%endblock%}
