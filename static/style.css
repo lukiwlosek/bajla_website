@@ -1,0 +1,124 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.btn {
+  background-color: #7386d5;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1rem;
+  margin: 3px;
+}
+.btn:active {
+  animation: click;
+  animation-duration: 2s;
+}
+@keyframes click {
+  0% {
+    color: blue;
+    border: 1px solid blue;
+    transform: rotate(10deg);
+  }
+  100% {
+    color: white;
+    border: 1px solid white;
+    transform: rotate(0);
+  }
+}
+
+p {
+  font-size: 1.1em;
+  font-weight: 400;
+  line-height: 1.7em;
+  margin: 5px;
+}
+
+.card {
+  max-width: 600px;
+  margin: 1rem;
+  border: 2px solid white;
+  background-color: white;
+}
+
+.img-top {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin: 5px;
+}
+
+/* sidebar navbar styling */
+#sidebar {
+  background-color: #7387d5;
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+  color: white;
+}
+.active {
+  display: none;
+}
+.sidebar-header {
+  background-color: #8299ffe8;
+  font-weight: 400;
+}
+
+nav ul {
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+nav a:active {
+  border: 1px solid;
+}
+nav a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+/* apply grid here boss */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* content */
+#content {
+  background-image: url("/static/images/main.png");
+  height: 100%;
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* from a maximum to small */
+@media (max-width: 768px) {
+  #sidebar {
+    min-width: 400px;
+    max-width: 400px;
+    font-size: 2rem;
+  }
+}
