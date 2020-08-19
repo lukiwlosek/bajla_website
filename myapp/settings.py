@@ -25,7 +25,7 @@ SECRET_KEY = 'b1=kj&)3iar1ga2uuyg4_=al06ep9-x(aw18s@==c22)#imb)p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['bajlawebsite.herokuapp.com']
 
 
 # Application definition
