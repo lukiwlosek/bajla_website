@@ -6,21 +6,13 @@
 	<title>Chat</title>
   
   {% endblock %}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static 'style.css'%}"/>
-  <style type="text/css">
-    .main {
-      background-image: url({% static "images/main.png" %});
-      width:100%;
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: cover;
-    } 
-  </style>
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css'%}"/>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper"> 
   <!-- Sidebar -->
   <nav id="sidebar">
       <div class="sidebar-header">
@@ -45,41 +37,34 @@
           <li>
               <a href="{% url 'video' %}">Video + Report</a>
           </li>
-          {% comment %} <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Planning</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 3</a>
-                  </li>
-              </ul>
-          </li> {% endcomment %}
+          
           
       </ul>
-      <p>by Paulina Arazna</p>
+      <div class="sidebar-header">
+        <p>by Paulina Arazna</p>
+      </div>
   </nav>
+<!-- main content -->
+  <div id="content">
 
-  <div class="main">
-    <div id="content">
     <button id="sidebarCollapse" class="btn nav" > ☰ </button>
     
       {%block body%}
-    
-        <h1> Nutmeg Shell Canada Water Leisure Center </h1>
-        <p>The building is a multifunctional facility designed mainly for young people and adults. It will be built in central London, in the
-        Southwark district. It will be located with access to public transport and a very good connection of main city roads with a size
-        of about 5176 m2. The design is as part of the British Land and London Borough of Southwark. The aim is to create a new
-        recreation and art centre at Canada Water. The building will provide access to a variety of art and sporting activities. The main
-        purpose is to promote physical and mental health, well-being and passion.</p>
+      <div class="row">
+        <div class="card">
+            <div class="card-body">
+              <h1> Nutmeg Shell Canada Water Leisure Center </h1>
+              <p>The building is a multifunctional facility designed mainly for young people and adults. It will be built in central London, in the
+              Southwark district. It will be located with access to public transport and a very good connection of main city roads with a size
+              of about 5176 m2. The design is as part of the British Land and London Borough of Southwark. The aim is to create a new
+              recreation and art centre at Canada Water. The building will provide access to a variety of art and sporting activities. The main
+              purpose is to promote physical and mental health, well-being and passion.</p>
+          </div>
+        </div>
+      </div>
       {%endblock%}
-        
-    </div>
-  </div>    
+    
+  </div>
 
 </div>
 	

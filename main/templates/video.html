@@ -7,11 +7,14 @@
 
 {%block body%}
 <div class="row">
-<div class="card" style="width:70rem;">
-  <iframe  height="713" width="100%" src="https://www.youtube.com/embed/ijI1wZXCWSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <div class="card-body">
-    <h2> Posters presentation </h2>
-    <a style="color:blue" href="{% static 'presentation.pdf'%}">Click this text for full pdf report </a>
+  <div class="card">
+    <div class="img-top" >
+      <iframe src="https://www.youtube.com/embed/ijI1wZXCWSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="card-body">
+      <h2> Posters presentation  </h2>
+      <a style="color:blue" href="{% static 'presentation.pdf'%}">Click this text for full pdf report </a>
+    </div>
   </div>
 </div>
 
