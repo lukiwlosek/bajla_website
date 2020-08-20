@@ -6,29 +6,20 @@
 	<title>Chat</title>
   
   {% endblock %}
-  <link rel="stylesheet" href="{% static 'style.css'%}"/>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'style.css'%}"/>
-  <style type="text/css">
-    .main {
-      background-image: url({% static "images/main.png" %});
-      width:100%;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    } 
-  </style>
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'style.css'%}"/>
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper"> 
   <!-- Sidebar -->
   <nav id="sidebar">
       <div class="sidebar-header">
           <h3>BSc Architectural Technology PDE3730 Graduation Project</h3>
       </div>
 
-      <ul class="list-unstyled components">
+      <ul class="nav-list">
           
           <li >
               <a href="{% url 'home' %}">Home</a>
@@ -46,47 +37,38 @@
           <li>
               <a href="{% url 'video' %}">Video + Report</a>
           </li>
-          {% comment %} <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Planning</a>
-              <ul class="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="#">Page 1</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 2</a>
-                  </li>
-                  <li>
-                      <a href="#">Page 3</a>
-                  </li>
-              </ul>
-          </li> {% endcomment %}
+          
           
       </ul>
-      by Paulina Arazna
-  </nav>
-
-  <div class="main">
-    <div id="content">
-    
-      <div class="container-fluid">
-        {%block body%}
-      
-          <h1> Nutmeg Shell Canada Water Leisure Center </h1>
-          The building is a multifunctional facility designed mainly for young people and adults. It will be built in central London, in the
-          Southwark district. It will be located with access to public transport and a very good connection of main city roads with a size
-          of about 5176 m2. The design is as part of the British Land and London Borough of Southwark. The aim is to create a new
-          recreation and art centre at Canada Water. The building will provide access to a variety of art and sporting activities. The main
-          purpose is to promote physical and mental health, well-being and passion.
-        {%endblock%}
-        
+      <div class="sidebar-header">
+        <p>by Paulina Arazna</p>
       </div>
-    </div>
-  </div>    
+  </nav>
+<!-- main content -->
+  <div id="content">
+
+    <button id="sidebarCollapse" class="btn nav" > ☰ </button>
+    
+      {%block body%}
+      <div class="row">
+        <div class="card">
+            <div class="card-body">
+              <h1> Nutmeg Shell Canada Water Leisure Center </h1>
+              <p>The building is a multifunctional facility designed mainly for young people and adults. It will be built in central London, in the
+              Southwark district. It will be located with access to public transport and a very good connection of main city roads with a size
+              of about 5176 m2. The design is as part of the British Land and London Borough of Southwark. The aim is to create a new
+              recreation and art centre at Canada Water. The building will provide access to a variety of art and sporting activities. The main
+              purpose is to promote physical and mental health, well-being and passion.</p>
+          </div>
+        </div>
+      </div>
+      {%endblock%}
+    
+  </div>
 
 </div>
 	
-</div>
-   <!-- jQuery CDN - Slim version (=without AJAX) -->
+<!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -94,6 +76,15 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 {% block scripts %}
   <!--- some scripts that apply to all pages -->
+<script>
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+</script>
 {% endblock %}
 
 </body>
