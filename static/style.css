@@ -81,6 +81,7 @@ h3 {
   min-width: 250px;
   max-width: 250px;
   min-height: 100vh;
+  font-size:1.5rem;
   color: white;
 }
 .active {
@@ -134,5 +135,8 @@ nav a {
 @media (max-width: 768px) {
   .row{
     grid-template-columns: repeat(1, 1fr);
+  }
+  body{
+    font-size:0.8rem;
   }
 }
